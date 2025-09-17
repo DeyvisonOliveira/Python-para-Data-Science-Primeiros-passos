@@ -1,0 +1,1401 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "mount_file_id": "1YWadS-swH-94mAjkwjtOVk4wQGpggmAn",
+      "authorship_tag": "ABX9TyPbWIm289ot/yrRBY4B5UuU",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/DeyvisonOliveira/Python-para-Data-Science-Primeiros-passos/blob/main/primeiros%20passos\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Python - listas"
+      ],
+      "metadata": {
+        "id": "5_UL3Rmr3AKS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista = ['Fabricio Daniel',9.5,9.0,8.0,True]\n",
+        "lista"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qi7vU34B3dHb",
+        "outputId": "67dc3a54-5aa6-4c48-e01b-6a60e112c488"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Fabricio Daniel', 9.5, 9.0, 8.0, True]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[0]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "TNYPks7v3llt",
+        "outputId": "12f76eda-b6ab-4f01-ece1-37048083536b"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Fabricio Daniel'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[1]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VNLG5mZj5XzX",
+        "outputId": "cb6457ce-878d-48df-9fc0-9454b4d02d23"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "9.5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[-1]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mwF45OWX5ehC",
+        "outputId": "ffe9f8f9-17cc-4ff4-9085-f91372fb3a75"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for elemento in lista:\n",
+        "  print(elemento)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4At-6De95tv5",
+        "outputId": "159382ee-37c3-46a1-e9cb-b8358e997076"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Fabricio Daniel\n",
+            "9.5\n",
+            "9.0\n",
+            "8.0\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[3] = 10.0\n",
+        "lista"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DaV43kT16A9r",
+        "outputId": "b1fae205-6375-44cd-d7fe-ac874279845c"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Fabricio Daniel', 9.5, 9.0, 10.0, True]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "media = (lista[1] + lista[2] + lista[3])/3\n",
+        "media"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mpWy569p6M2N",
+        "outputId": "1e330bb4-8c4b-4773-ff7a-5f34493b26ac"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "9.5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(lista)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Q6jSKxV36c7S",
+        "outputId": "f06d96ef-0dc5-496b-fc9d-25f39485c8dc"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[1:4]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uEBbsYX-8WKt",
+        "outputId": "ff830314-36ed-4a91-d7b3-a965f7cb5233"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[9.5, 9.0, 10.0]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[1:3]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_Bug1v6T8vIj",
+        "outputId": "a9a2d151-6f58-46c9-d38f-ef2a9f69557f"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[9.5, 9.0]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[:3]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YnqZeXKO8-jP",
+        "outputId": "98f375dc-6032-4cb7-a5af-78bc1ad59e43"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Fabricio Daniel', 9.5, 9.0]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[3:]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pT6K-7o29HQx",
+        "outputId": "d799b250-c583-4c67-8e9f-d0f3fa98ed1e"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[10.0, True]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[:]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ShT6_FMD9JpF",
+        "outputId": "964f72df-f42b-4561-9683-075fb58bfd7e"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Fabricio Daniel', 9.5, 9.0, 10.0, True]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista.append(media)\n",
+        "lista"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GqGMi5eU9V8-",
+        "outputId": "b8fce20c-6ba4-4288-a2d1-e5ede29256a8"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Fabricio Daniel', 9.5, 9.0, 10.0, True, 9.5]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista.extend([10.0,8.0,9.0])\n",
+        "lista"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v-Jvqniu9-4k",
+        "outputId": "bdf912e4-e4f4-4729-ee29-eef5fd13a5fb"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Fabricio Daniel', 9.5, 9.0, 10.0, True, 9.5, 10.0, 8.0, 9.0]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista.append([10.0,8.0,9.0])\n",
+        "lista"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6XkGRd-M-BU4",
+        "outputId": "718636f5-cd0f-458f-afaf-90f67dadbd8c"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Fabricio Daniel',\n",
+              " 9.5,\n",
+              " 9.0,\n",
+              " 10.0,\n",
+              " True,\n",
+              " 9.5,\n",
+              " 10.0,\n",
+              " 8.0,\n",
+              " 9.0,\n",
+              " [10.0, 8.0, 9.0],\n",
+              " [10.0, 8.0, 9.0]]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista.remove([10.0,8.0,9.0])\n",
+        "lista"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mtK331LN-mxd",
+        "outputId": "bb02960e-4faf-40a5-e31b-c1e5d6f519d5"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Fabricio Daniel',\n",
+              " 9.5,\n",
+              " 9.0,\n",
+              " 10.0,\n",
+              " True,\n",
+              " 9.5,\n",
+              " 10.0,\n",
+              " 8.0,\n",
+              " 9.0,\n",
+              " [10.0, 8.0, 9.0]]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista.remove([10.0,8.0,9.0])\n",
+        "lista"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IwUkrv90-3_P",
+        "outputId": "17a76dc8-f210-4995-aa9f-f7f929a785bf"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Fabricio Daniel', 9.5, 9.0, 10.0, True, 9.5, 10.0, 8.0, 9.0]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dicionario = {'chave_1':1,\n",
+        "              'chave_2':2}\n",
+        "dicionario"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FcNS7_zm-8vY",
+        "outputId": "058b3288-a096-48ec-8e19-34b6fd875c42"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'chave_1': 1, 'chave_2': 2}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 20
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cadastro = {'matricula': 2000168933,\n",
+        "            'dia_cadastro': 25,\n",
+        "            'mes_cadastro': 10,\n",
+        "            'turma': '2E'}\n",
+        "cadastro"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6IoZQuYTBmyL",
+        "outputId": "28a226bb-458f-4f1a-9928-8098d634b240"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'matricula': 2000168933,\n",
+              " 'dia_cadastro': 25,\n",
+              " 'mes_cadastro': 10,\n",
+              " 'turma': '2E'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cadastro['matricula']"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "t8szoYHLCqZE",
+        "outputId": "679e8f67-be9d-4076-c704-18379c5810d8"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "2000168933"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cadastro['turma']"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "e4UWvKuHC5Wa",
+        "outputId": "ba7f59ba-7a87-405c-c9f4-5b2d94deab35"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'2E'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 23
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cadastro['turma'] = '2A'\n",
+        "cadastro"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mxv1T-y3C9s7",
+        "outputId": "34095f93-9aae-4648-981a-bcfe5cda01dc"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'matricula': 2000168933,\n",
+              " 'dia_cadastro': 25,\n",
+              " 'mes_cadastro': 10,\n",
+              " 'turma': '2A'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 24
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cadastro['modalidade'] = 'EAD'\n",
+        "cadastro"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mMhRQA62DRA6",
+        "outputId": "8f881b8c-3674-438e-ebca-aff435f3535a"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'matricula': 2000168933,\n",
+              " 'dia_cadastro': 25,\n",
+              " 'mes_cadastro': 10,\n",
+              " 'turma': '2A',\n",
+              " 'modalidade': 'EAD'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 25
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Manipulação de listas**"
+      ],
+      "metadata": {
+        "id": "iZB5Kofn7GEg"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **dicionários**"
+      ],
+      "metadata": {
+        "id": "MB-FsxHNEMZ5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cadastro.pop('turma')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "AsV5lh6KDhYc",
+        "outputId": "0e61db4b-6171-40bf-a0b7-b60bead1771f"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'2A'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 26
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cadastro"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "85kG1MU4Eors",
+        "outputId": "0c7fcf39-ccd6-4b2d-eb5a-822381b929dd"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'matricula': 2000168933,\n",
+              " 'dia_cadastro': 25,\n",
+              " 'mes_cadastro': 10,\n",
+              " 'modalidade': 'EAD'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cadastro.items()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2z5kDujfEqzq",
+        "outputId": "fb4d934e-5e31-4d07-e838-510cc943270d"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_items([('matricula', 2000168933), ('dia_cadastro', 25), ('mes_cadastro', 10), ('modalidade', 'EAD')])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cadastro.keys()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FYuYwuGeFMB4",
+        "outputId": "c87bcfc6-15e8-4864-9db5-3512e71cdf2f"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_keys(['matricula', 'dia_cadastro', 'mes_cadastro', 'modalidade'])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 29
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cadastro.values()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g8A-sfrhFSz4",
+        "outputId": "d4700f35-8842-46ba-b0a8-06371191f349"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_values([2000168933, 25, 10, 'EAD'])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 30
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for chaves in cadastro.keys():\n",
+        "  print(cadastro[chaves])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KnHn1-YdFeCL",
+        "outputId": "7faa5fe4-c8e9-4ef5-fd97-fa6c12f72e5b"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2000168933\n",
+            "25\n",
+            "10\n",
+            "EAD\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for valores in cadastro.values():\n",
+        "  print(valores)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LUP26g0IGD8A",
+        "outputId": "3056ee91-e713-46d3-ed38-df98fe26036e"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2000168933\n",
+            "25\n",
+            "10\n",
+            "EAD\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for chaves, valores in cadastro.items():\n",
+        "  print(chaves, valores)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "b-LwxPyVGXs2",
+        "outputId": "cd9f688d-fd4e-4d27-996e-d5bb6d4a2638"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "matricula 2000168933\n",
+            "dia_cadastro 25\n",
+            "mes_cadastro 10\n",
+            "modalidade EAD\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "loja = {'nomes': ['televisão', 'celular', 'notebook', 'geladeira', 'fogão'],\n",
+        "        'precos': [2000, 1500, 3500, 4000, 1500]}"
+      ],
+      "metadata": {
+        "id": "Tn3nBQnjG2kB"
+      },
+      "execution_count": 34,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for chave, elementos in loja.items():\n",
+        "  print(f'Chave: {chave}\\nElementos:')\n",
+        "  for dado in elementos:\n",
+        "    print(dado)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Hj9yyy_0HRvJ",
+        "outputId": "42a67acf-933f-4a78-f9f6-df700a1e958c"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Chave: nomes\n",
+            "Elementos:\n",
+            "televisão\n",
+            "celular\n",
+            "notebook\n",
+            "geladeira\n",
+            "fogão\n",
+            "Chave: precos\n",
+            "Elementos:\n",
+            "2000\n",
+            "1500\n",
+            "3500\n",
+            "4000\n",
+            "1500\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "precos = [100.0, 400.0, 200.0]\n",
+        "soma = sum(precos)\n",
+        "soma"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eVxA4ZujIDHo",
+        "outputId": "9ce56462-6599-4a85-fa2d-5e04ebf67f79"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "700.0"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 38
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "papel = [2172.54, 3701.35, 3518.09, 3456.61, 3249.38, 2840.82, 3891.45, 3075.26, 2317.64, 3219.08]\n",
+        "papel"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PrKrGRgEJ1e9",
+        "outputId": "5ab0aaaa-4168-4991-ee93-f9c50bba5e64"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[2172.54,\n",
+              " 3701.35,\n",
+              " 3518.09,\n",
+              " 3456.61,\n",
+              " 3249.38,\n",
+              " 2840.82,\n",
+              " 3891.45,\n",
+              " 3075.26,\n",
+              " 2317.64,\n",
+              " 3219.08]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 39
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "papel = sum(papel)\n",
+        "papel"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cNyVTx5GJ9j_",
+        "outputId": "0ddb69d1-5b1c-429d-949b-24190e6850f0"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "31442.22"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 40
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Dados de gastos\n",
+        "gastos = [2172.54, 3701.35, 3518.09, 3456.61, 3249.38, 2840.82, 3891.45, 3075.26, 2317.64, 3219.08]\n",
+        "\n",
+        "# Calculamos a média encontrando o valor total de gastos com sum\n",
+        "# e a quantidade total de compras realizadas com len\n",
+        "total_gastos = sum(gastos)\n",
+        "quantidade_compras = len(gastos)\n",
+        "media_gastos = total_gastos / quantidade_compras\n",
+        "# Resultado\n",
+        "print(f'A média de gastos é {media_gastos} reais.')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6RT6d8OYKHLh",
+        "outputId": "67584c4c-dab1-4248-a66e-01c0b75214c2"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A média de gastos é 3144.222 reais.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Dados de gastos\n",
+        "gastos = [2172.54, 3701.35, 3518.09, 3456.61, 3249.38, 2840.82, 3891.45, 3075.26, 2317.64, 3219.08]\n",
+        "\n",
+        "# Variável que vai contar quantas compras foram feitas acima de 3000\n",
+        "contador_acima_3000 = 0\n",
+        "# Usamos o laço para ler a lista de gastos\n",
+        "for gasto in gastos:\n",
+        "  # Verificamos se o elemento está acima de 3000\n",
+        "  if gasto > 3000:\n",
+        "    # Acrescentamos mais um no contador, caso tenha algum valor acima de 3000\n",
+        "    contador_acima_3000 += 1\n",
+        "\n",
+        "# Quantidade Compras\n",
+        "# Variável que vai ser utilizada para o cálculo da porcentagem\n",
+        "quantidade_compras = len(gastos)\n",
+        "\n",
+        "\n",
+        "# Com a contagem conseguimos calcular a porcentagem de valores acima de 3000 entre todas as compras\n",
+        "porcentagem_acima_3000 = 100 * (contador_acima_3000) / (quantidade_compras)\n",
+        "\n",
+        "# Resultado\n",
+        "print(f'{contador_acima_3000} compras foram acima de R$3000,00.')\n",
+        "print(f'{porcentagem_acima_3000}% dos gastos foram acima de R$3000,00.')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vypvZTAELunv",
+        "outputId": "81efaa7b-44b7-422a-e8c0-807e0ca99519"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7 compras foram acima de R$3000,00.\n",
+            "70.0% dos gastos foram acima de R$3000,00.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Lista que irá armazenar os 5 números inteiros\n",
+        "lista_numeros = []\n",
+        "\n",
+        "# Criamos um laço que vai iterar 5 vezes para receber os 5 números\n",
+        "for i in range(0, 5):\n",
+        "  # Coletamos o valor e inserimos na lista por 5 vezes\n",
+        "  numero = int(input('Digite um número inteiro: '))\n",
+        "  lista_numeros.append(numero)\n",
+        "#Resultado\n",
+        "print(f'Lista de números inseridos: {lista_numeros}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7CNrr1XELwBI",
+        "outputId": "bd85c41c-8ec3-42c2-f409-9fa17a925664"
+      },
+      "execution_count": 43,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número inteiro: 5\n",
+            "Digite um número inteiro: 6\n",
+            "Digite um número inteiro: 2\n",
+            "Digite um número inteiro: 1\n",
+            "Digite um número inteiro: 2\n",
+            "Lista de números inseridos: [5, 6, 2, 1, 2]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Lista que irá armazenar os 5 números inteiros\n",
+        "lista_numeros = []\n",
+        "\n",
+        "# Criamos um laço que vai iterar 5 vezes para receber os 5 números\n",
+        "for i in range(0, 5):\n",
+        "  # Coletamos o valor e inserimos na lista por 5 vezes\n",
+        "  numero = int(input('Digite um número inteiro: '))\n",
+        "  lista_numeros.append(numero)\n",
+        "# Usamos da lógica de partição para imprimir o resultado\n",
+        "print(f'Lista de números invertida: {lista_numeros[::-1]}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Yb7VxrchMHuB",
+        "outputId": "1c96486c-ac15-4986-f36d-513b51039441"
+      },
+      "execution_count": 44,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número inteiro: 8\n",
+            "Digite um número inteiro: 5\n",
+            "Digite um número inteiro: 2\n",
+            "Digite um número inteiro: 1\n",
+            "Digite um número inteiro: 6\n",
+            "Lista de números invertida: [6, 1, 2, 5, 8]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Coletamos o números\n",
+        "numero = int(input('Digite um número inteiro: '))\n",
+        "# Lista para receber os números primos\n",
+        "lista_primos = []\n",
+        "# Laço que vai rodar por todos os números abaixo do número digitado\n",
+        "for num in range(2, numero):\n",
+        "  # Primo é uma bandeira, ela permite sabermos se o valor analisado é ou não primo\n",
+        "  primo = True\n",
+        "  # Testamos se todos os números abaixo do especificado no primeiro laço podem\n",
+        "  # gerar uma divisão exata\n",
+        "  for teste_divisiveis in range(2, num):\n",
+        "    if num % teste_divisiveis == 0:\n",
+        "      # Caso seja divisivel por algum número entendemos que\n",
+        "      # o num não é primo e finalizamos o laço interno com break\n",
+        "      primo = False\n",
+        "      break\n",
+        "  # A condição se torna o resultado booleno de primo: False, ignoramos o condicional\n",
+        "  # True, executamos o bloco do if\n",
+        "  if primo:\n",
+        "    lista_primos.append(num)\n",
+        "# Resultado\n",
+        "print(f'Lista de números primos: {lista_primos}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FB70BzIIMIgW",
+        "outputId": "b8e75b56-34dd-4d6c-afa4-419795ff9e7a"
+      },
+      "execution_count": 46,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número inteiro: 5\n",
+            "Lista de números primos: [2, 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Inicializamos os dados\n",
+        "respostas = [] # Lista para receber as respostas\n",
+        "# Lista de gabaritos\n",
+        "gabarito = ['D', 'A', 'C', 'B', 'A', 'D', 'C', 'C', 'A', 'B']\n",
+        "nota = 0 # Irá acumular a nota total\n",
+        "\n",
+        "# Recebemos as respostas do aluno\n",
+        "for i in range(0, 10):\n",
+        "  respostas.append(input(f'Insira a resposta da questão {i + 1}: ').upper())\n",
+        "\n",
+        "# Verificamos se as respostas são iguais e adicionamos à nota\n",
+        "for i in range(0,10):\n",
+        "  if respostas[i] == gabarito[i]:\n",
+        "    nota += 1\n",
+        "\n",
+        "# Exibindo nota final\n",
+        "print(f'Nota final: {nota}')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1LQFMMGtMRtw",
+        "outputId": "2da70f88-c8cd-4a88-f42c-ebc3c31dbabc"
+      },
+      "execution_count": 47,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira a resposta da questão 1: A\n",
+            "Insira a resposta da questão 2: B\n",
+            "Insira a resposta da questão 3: C\n",
+            "Insira a resposta da questão 4: D\n",
+            "Insira a resposta da questão 5: \n",
+            "Insira a resposta da questão 6: A\n",
+            "Insira a resposta da questão 7: E\n",
+            "Insira a resposta da questão 8: F\n",
+            "Insira a resposta da questão 9: E\n",
+            "Insira a resposta da questão 10: G\n",
+            "Nota final: 1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Coletamos a lista de temperaturas\n",
+        "temperaturas_mensais = []\n",
+        "for i in range(0,12):\n",
+        "  temperaturas_mensais.append(float(input(f'Digite a média de temperatura do mês {i+1}: ')))\n",
+        "# Criamos uma lista auxiliar para os nomes dos meses\n",
+        "meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']\n",
+        "# Calculamos a média\n",
+        "media_anual = sum(temperaturas_mensais) / len(temperaturas_mensais)\n",
+        "\n",
+        "#Resultado\n",
+        "print('Temperaturas acima da média em: ')\n",
+        "for i in range(0,12):\n",
+        "  # Verificamos todas as temperaturas de acordo com a média anual\n",
+        "  if temperaturas_mensais[i] > media_anual:\n",
+        "    # Como os índices dos meses correspondem às temperaturas,\n",
+        "    # podemos imprimir eles sob o mesmo índice\n",
+        "    print(meses[i])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5ZXsOJQNMdYD",
+        "outputId": "9ece7cee-2b46-4ce3-84e2-d8343277eefc"
+      },
+      "execution_count": 48,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a média de temperatura do mês 1: 40\n",
+            "Digite a média de temperatura do mês 2: 20\n",
+            "Digite a média de temperatura do mês 3: 30\n",
+            "Digite a média de temperatura do mês 4: 20\n",
+            "Digite a média de temperatura do mês 5: 10\n",
+            "Digite a média de temperatura do mês 6: 10\n",
+            "Digite a média de temperatura do mês 7: 5\n",
+            "Digite a média de temperatura do mês 8: 6\n",
+            "Digite a média de temperatura do mês 9: 7\n",
+            "Digite a média de temperatura do mês 10: 8\n",
+            "Digite a média de temperatura do mês 11: 20\n",
+            "Digite a média de temperatura do mês 12: 30\n",
+            "Temperaturas acima da média em: \n",
+            "Janeiro\n",
+            "Fevereiro\n",
+            "Março\n",
+            "Abril\n",
+            "Novembro\n",
+            "Dezembro\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
